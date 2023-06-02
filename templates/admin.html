@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+</head>
+<body>
+<table class="table" style="width: 600px;margin: 100px auto">
+
+  <thead>
+    <tr>
+      <th scope="row">name</th>
+      <th scope="row">math</th>
+      <th scope="row">art</th>
+      <th scope="row">other</th>
+      <th scope="row"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in stud %}
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.math }}</td>
+      <td>{{ item.art }}</td>
+      <td>{{ item.other }}</td>
+      <td>
+          <div class="btn-group" role="group" aria-label="Basic example" style="margin: auto">
+              <button type="button" class="btn btn-primary" ><a href="/modify?name={{ item.name }}" style="color: black">modify</a></button>
+              <button type="button" class="btn btn-primary"><a href="/delete?name={{ item.name }}" style="color: black">delete</a></button>
+          </div>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div style="display: flex;  justify-content: center;  align-items: center;">
+    <button type="button" class="btn btn-primary" ><a href="/add" style="color: black;width: 200px">add</a></button>
+    <button type="button" class="btn btn-primary"><a href="/logout" style="color: black;width: 200px">logout</a></button>
+</div>
+
+</body>
+</html>
