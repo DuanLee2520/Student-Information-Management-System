@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 students = [
-    {'name': 'King', 'math': '62', 'art': '8381', 'other': '100'},
+    {'name': 'King', 'math': '62', 'art': '8381', 'other': '11100'},
     {'name': 'eden', 'math': '612', 'art': '8128', 'other': '100'},
     {'name': 'jo', 'math': '622', 'art': '828', 'other': '100'},
 ]
